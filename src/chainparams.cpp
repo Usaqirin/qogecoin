@@ -218,9 +218,9 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.bitcoin.jonasschnelli.ch.");
+        vSeeds.emplace_back("testnet-seed.qogecoin.jonasschnelli.ch.");
         //////vSeeds.emplace_back("seed.tbtc.petertodd.org.");
-        //////vSeeds.emplace_back("seed.testnet.bitcoin.sprovoost.nl.");
+        //////vSeeds.emplace_back("seed.testnet.qogecoin.sprovoost.nl.");
         //////vSeeds.emplace_back("testnet-seed.bluematt.me."); // Just a static list of stable node(s), only supports x9
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,65);
@@ -554,12 +554,13 @@ std::unique_ptr<const CChainParams> CreateChainParams(const ArgsManager& args, c
         return std::unique_ptr<CChainParams>(new CMainParams());
     } else if (chain == CBaseChainParams::TESTNET) {
         return std::unique_ptr<CChainParams>(new CTestNetParams());
-    } else if (chain == CBaseChainParams::SIGNET) {
-        return std::unique_ptr<CChainParams>(new SigNetParams(args));
-    } else if (chain == CBaseChainParams::REGTEST) {
-        return std::unique_ptr<CChainParams>(new CRegTestParams(args));
+    // TODO: Enable Signet and Regtest networks
+    // } else if (chain == CBaseChainParams::SIGNET) {
+    //     return std::unique_ptr<CChainParams>(new SigNetParams(args));
+    // } else if (chain == CBaseChainParams::REGTEST) {
+    //     return std::unique_ptr<CChainParams>(new CRegTestParams(args));
     }
-    throw std::runtime_error(strprintf("%s: Unknown chain %s.", __func__, chain));
+    // throw std::runtime_error(strprintf("%s: Unknown chain %s.", __func__, chain));
 }
 
 void SelectParams(const std::string& network)
