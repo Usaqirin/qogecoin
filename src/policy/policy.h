@@ -22,7 +22,7 @@ class CScript;
 /** Default for -blockmaxweight, which controls the range of block weights the mining code will create **/
 static constexpr unsigned int DEFAULT_BLOCK_MAX_WEIGHT{MAX_BLOCK_WEIGHT - 4000};
 /** Default for -blockmintxfee, which sets the minimum feerate for a transaction in blocks created by mining code **/
-static constexpr unsigned int DEFAULT_BLOCK_MIN_TX_FEE{1000};
+static constexpr unsigned int DEFAULT_BLOCK_MIN_TX_FEE{0};
 /** The maximum weight for transactions we're willing to relay/mine */
 static constexpr unsigned int MAX_STANDARD_TX_WEIGHT{400000};
 /** The minimum non-witness size for transactions we're willing to relay/mine (1 segwit input + 1 P2WPKH output = 82 bytes) */
@@ -32,7 +32,7 @@ static constexpr unsigned int MAX_P2SH_SIGOPS{15};
 /** The maximum number of sigops we're willing to relay/mine in a single tx */
 static constexpr unsigned int MAX_STANDARD_TX_SIGOPS_COST{MAX_BLOCK_SIGOPS_COST/5};
 /** Default for -incrementalrelayfee, which sets the minimum feerate increase for mempool limiting or replacement **/
-static constexpr unsigned int DEFAULT_INCREMENTAL_RELAY_FEE{1000};
+static constexpr unsigned int DEFAULT_INCREMENTAL_RELAY_FEE{0};
 /** Default for -bytespersigop */
 static constexpr unsigned int DEFAULT_BYTES_PER_SIGOP{20};
 /** Default for -permitbaremultisig */
