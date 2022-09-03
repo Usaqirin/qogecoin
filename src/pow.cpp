@@ -16,8 +16,6 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 {
     assert(pindexLast != nullptr);
     return DarkGravityWave(pindexLast,params);
-    return DarkGravityWave(pindexLast,params);
-    return DarkGravityWave(pindexLast,params);
     unsigned int nProofOfWorkLimit = UintToArith256(params.powLimit).GetCompact();
 
     // Only change once per difficulty adjustment interval
