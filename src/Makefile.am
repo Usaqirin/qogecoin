@@ -560,6 +560,15 @@ libbitcoin_consensus_a_SOURCES = \
   consensus/params.h \
   consensus/tx_check.cpp \
   consensus/validation.h \
+  hash/yescrypt/yescrypt.h \
+  hash/yescrypt/yescrypt.c \
+  hash/yescrypt/sha256.h \
+  hash/yescrypt/sha256_c.h \
+  hash/yescrypt/yescrypt-best_c.h \
+  hash/yescrypt/sysendian.h \
+  hash/yescrypt/yescrypt-platform_c.h \
+  hash/yescrypt/yescrypt-opt_c.h \
+  hash/yescrypt/yescrypt-simd_c.h \
   hash.cpp \
   hash.h \
   prevector.h \

@@ -280,6 +280,11 @@ public:
         return (int64_t)nTime;
     }
 
+    uint256 GetBlockPoWHash() const
+    {
+        return GetBlockHeader().GetPoWHash();
+    }
+
     int64_t GetBlockTimeMax() const
     {
         return (int64_t)nTimeMax;
